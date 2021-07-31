@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:8082/api/v1/',
+  serverUrl: 'http://localhost:8082/api/v1/',
   loginCacheKey: 'login.key'
 };
 

@@ -17,3 +17,32 @@
 // 3rd party libraries
 $fa-font-path: "../node_modules/font-awesome/fonts";
 //@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+.margin-10 {
+  margin-top: 10px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+.quarter-width-input {
+  width: 25%;
+}
+
+.half-width-input {
+  width: 50%;
+}
+
+.main-header{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
