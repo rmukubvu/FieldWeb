@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="createForm">
+      <p>
+        <mat-form-field class="quarter-width-input" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="name" formControlName="name" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="quarter-width-input" appearance="outline">
+          <mat-label>Account Number</mat-label>
+          <input matInput placeholder="account-number" formControlName="accountNumber" required style="text-transform:uppercase">
+        </mat-form-field>
+      </p>
+      <mat-form-field class="half-width-input" appearance="outline">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="street-number" formControlName="address" required></textarea>
+      </mat-form-field>
+      <p>
+        <mat-spinner *ngIf="show"></mat-spinner>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

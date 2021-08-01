@@ -1,0 +1,21 @@
+<div class="signin-content">
+  <mat-card>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <mat-card-content *ngIf="!showSpinner">
+      <form [formGroup]="loginForm">
+        <h1>Log In</h1>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="user" formControlName="username" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <mat-label>password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

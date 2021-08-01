@@ -2,15 +2,19 @@ import {GridColumnDefinition} from './grid.column.definition';
 
 export class GridBase<T extends GridColumnDefinition> {
 
-  selectedColumns: T;
+  columnDefs: {};
+  rowData: any;
+  defaultColDef = {
+    flex: 1,
+    sortable: true,
+    resizable: true,
+    filter: true,
+  };
+  rowSelection: 'single';
 
   constructor(column: T) {
-    this.selectedColumns = column;
-    console.log('in super');
+    this.columnDefs = column.columns;
   }
 
-  getColumns() {
-    return this.selectedColumns?.columns;
-  }
 
 }

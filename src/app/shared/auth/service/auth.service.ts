@@ -74,4 +74,7 @@ export class AuthService extends ServiceBase {
     return this.localStorage.retrieve('refreshToken');
   }
 
+  isLoggedIn() {
+    return this.getJwtToken() !== null;
+  }
 }

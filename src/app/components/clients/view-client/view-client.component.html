@@ -1,0 +1,12 @@
+<div class="margin-20">
+  <ag-grid-angular
+    style="width: 100%; height: 500px;"
+    class="ag-theme-balham"
+    [pagination]="true"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [rowSelection]="rowSelection"
+    [defaultColDef]="defaultColDef"
+    (rowDoubleClicked)="onRowClicked($event)">
+  </ag-grid-angular>
+</div>
